@@ -25,7 +25,7 @@ def collect_essence(amount):
                     # This is only for the purpose of fun challenge, but it is a bad programming practice!
     # DO NOT TOUCH THIS BLOCK OF CODE!
     essence += int(amount)
-    return essence + int(amount)
+    return essence
 
 def battle(enemy): #Note {element:str , essence:int}
     if weakness_of(enemy["element"]) == "flee" :
