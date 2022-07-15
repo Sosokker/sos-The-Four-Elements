@@ -1,6 +1,7 @@
 # DO NOT TOUCH THIS BLOCK OF CODE!
 elements = ["earth", "water", "fire", "air"]
 essence = 0
+element_dict =  {"earth":"air", "water":"earth", "fire":"water", "air":"fire"}
 # DO NOT TOUCH THIS BLOCK OF CODE!
 
 # Change 'pass' statements into your own implementation only!
@@ -8,15 +9,9 @@ essence = 0
 # to edit the existing lines!
 
 def weakness_of(element) -> str:
-    if element == "earth" :
-        return "air"
-    elif element == "water" :
-        return "earth"
-    elif element == "fire" :
-        return "water"
-    elif element == "air" :
-        return "fire"
-    elif (element not in elements) or (type(element) is not str) :
+    if element in element_dict :
+        return element_dict[element]
+    elif element not in element_dict :
         return "flee"
 
 def collect_essence(amount):
